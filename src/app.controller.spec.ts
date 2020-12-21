@@ -12,9 +12,9 @@ describe('AppController', () => {
     appController = app.get<AppController>(AppController);
   });
 
-  describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.healthCheck()).toBe('Healthy');
+  describe('health checker', () => {
+    it('Should return healthy when calling health checker', async () => {
+      expect(await appController.healthCheck()).toEqual('Healthy');
     });
   });
 });

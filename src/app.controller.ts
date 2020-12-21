@@ -7,6 +7,6 @@ export class AppController {
   @ApiOkResponse({ description: 'API is healthy.' })
   @Get()
   async healthCheck(): Promise<string> {
-    return 'Healthy.'
+    return 'Healthy'
   }
 }
